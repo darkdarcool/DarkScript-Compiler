@@ -34,7 +34,6 @@ Unfortanantly ASNI escape codes don't work in this version of DarkScript. But if
 <details>
 <summary>List of colors</summary>
 <br>
-- Red
-- Blue
-- 
+* Red
+* Blue
 </details>
