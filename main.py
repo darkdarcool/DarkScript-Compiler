@@ -25,8 +25,18 @@ pink = '\033[95m'
 read_line = 0
 console = 0
 today = date.today()
+print("What is file path?")
+file_path = input("")
+if '.ds' in file_path:
+  pass
+else:
+  raise Exception(f"{file_path} is not a DarkScript code file")
+try:
+  file = open(f"{file_path}","r")
+except:
+  raise Exception("No file in file path " + file_path + "!") 
+os.system("clear")
 print("Darkscript 1.0.2(early release)(" + str(today) + ")")
-file = open("main.ds","r") 
 Counter = 0
   
 # Reading from file 
@@ -682,7 +692,7 @@ for lines in f.readlines():
         pass
     lines = lines.rstrip()
     
-    if 'jb.lang.*' in lines:
+    if 'import jb.lang.*' in lines:
         jb = 1
         continue
     if "writeN(\"" in lines:
