@@ -1,2 +1,7 @@
-import console.commands.*
-window.sp("Hello{blue}{bold} world!")
+window.out("Hello, what is your name?$n: {red}")
+string name
+window.in(name)
+window.sleep(2)
+window.clear(clear:all)
+window.out.ln("{end}Hello {{name}}!")
+window.out.ln("wow")
