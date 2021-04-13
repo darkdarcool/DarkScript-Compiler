@@ -1,7 +1,6 @@
 import time, os, sys, re
 from datetime import date
 jb = 0
-oh no mario
 red = "\033[0;91m"
 w = "\033[0;37m"
 black = "\033[0;30m"
