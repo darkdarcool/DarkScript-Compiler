@@ -34,7 +34,7 @@ else:
 try:
   file = open(f"{file_path}","r")
 except:
-  raise Exception("No file in file path " + file_path + "!") 
+  raise Exception("No file in file path " + file_path + "!")
 os.system("clear")
 print("Darkscript 1.0.2(early release)(" + str(today) + ")")
 Counter = 0
@@ -44,7 +44,7 @@ Content = file.read()
 CoList = Content.split("\n") 
 load = 0
 for i in CoList: 
-    if i: 
+    if i:
         load += 1
 
 while (True):
@@ -154,6 +154,8 @@ def sppi():
             res = res.replace('{getChar3}', getChar3)
             res = res.replace('{blue}', blue)
             res = res.replace('{bold}', bold)
+            res = res.replace('{end}', '\033[0m')
+
             res = res.replace('{green}', green)
             res = res.replace('{magenta}', magenta)
             res = res.replace('{cyan}', cyan)
@@ -202,7 +204,7 @@ def logli():
             res = res.replace('$n', '\n')
             res = res.replace('\')', '')
             res = res.replace('{red}', red)
-
+            res = res.replace('{end}', '\033[0m')
             res = res.replace('{blue}', blue)
             res = res.replace('{bold}', bold)
             res = res.replace('{green}', green)
@@ -269,6 +271,8 @@ def logi():
         res = res.replace('{yellow}', yellow)
         res = res.replace('{white}', w)
         res = res.replace('{black}', black)
+        res = res.replace('{end}', '\033[0m')
+
         if "{{" in res:
             if "}}" in res:
                 start = "{{"
@@ -318,6 +322,7 @@ def spp():
         res = res.replace('{white}', w)
         res = res.replace('{black}', black)
         res = res.replace('{pink}', pink)
+        res = res.replace('{end}', '\033[0m')
         res = res.replace("{{input1}}", input1)
         res = res.replace("{{input2}}", input2)
         res = res.replace("{{input3}}", input3)
@@ -366,6 +371,7 @@ def sppj():
         res = res.replace('{white}', w)
         res = res.replace('{black}', black)
         res = res.replace('{pink}', pink)
+        res = res.replace('{end}', '\033[0m')
         res = res.replace("{{input1}}", input1)
         res = res.replace("{{input2}}", input2)
         res = res.replace("{{input3}}", input3)
@@ -415,6 +421,7 @@ def loglj():  #add suggestion about lang or whatever, KK- dark
                 res = res.replace('{white}', w)
                 res = res.replace('{black}', black)
                 res = res.replace('{pink}', pink)
+                res = res.replace('{end}', '\033[0m')
                 res = res.replace('"', "")
                 res = res.replace("  ", " ")
                 res = res.replace(")", "")
@@ -470,6 +477,7 @@ def lognj():  #add suggestion about lang or whatever, KK- dark
                 res = res.replace('{cyan}', cyan)
                 res = res.replace('{yellow}', yellow)
                 res = res.replace('{white}', w)
+                res = res.replace('{end}', '\033[0m')
                 res = res.replace('{black}', black)
                 res = res.replace('{pink}', pink)
                 res = res.replace('"', "")
@@ -524,6 +532,7 @@ def logl():
             res = res.replace('{green}', green)
             res = res.replace('{magenta}', magenta)
             res = res.replace('{cyan}', cyan)
+            res = res.replace('{end}', '\033[0m')
             res = res.replace('{yellow}', yellow)
             res = res.replace('{white}', w)
             res = res.replace('{black}', black)
@@ -580,6 +589,7 @@ def log():
             res = res.replace('{getChar3}', getChar3)
             res = res.replace('{bold}', bold)
             res = res.replace('{green}', green)
+            res = res.replace('{end}', '\033[0m')
             res = res.replace('{magenta}', magenta)
             res = res.replace('{cyan}', cyan)
             res = res.replace('{yellow}', yellow)
@@ -958,6 +968,7 @@ for lines in f.readlines():
     else:
         errors()
 #print(w)
+print(red + bold + "\nCode file exacuted with no errors")
 while True:
   sun = input(blue + bold + "~/DarkScript-Compiler" + end + w + "$ ")
   os.system(str(sun))

@@ -1,2 +1,5 @@
-import jb.lang.*
-writeN("Hello! It's me!")
+import console.commands.*
+window.sp("{blue}{bold}Hello user! What is your name?$n{end}")
+string name
+window.in(name)
+window.sp("{blue}{bold}Hello {{name}}!!")
