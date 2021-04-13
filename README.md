@@ -14,13 +14,13 @@ To print things into the console, DarkScript uses two main built-in functions to
 
 Here is the first basic one:
 
-``` python
+``` js
 window.out("Hello World")
 ```
 
 This then startes the log statment. This creates no new line this is is started. To make a new line, do this:
 
-``` python
+``` js
 window.out.ln("Hello Again")
 ```
 
@@ -54,3 +54,11 @@ Unfortanantly ASNI escape codes don't work in this version of DarkScript. But if
 --------------
 **User Input**
 --------------
+
+To use user input, you're gonna have to create the variable. To create this variable, you start off with the prefix of `string`. Following that with a space, you can ten come up with a name for your variable! Here is an example:
+
+``` js
+string name
+```
+
+After your variable is created, you can then use them for user input!!
