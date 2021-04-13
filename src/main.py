@@ -997,7 +997,7 @@ for lines in f.readlines():
     else:
         errors()
 #print(w)
-print(red + bold + "\nCode file exacuted with no errors")
+print(red + bold + "\nCode file executed")
 while True:
     sun = input(blue + bold + "~/DarkScript-Compiler" + end + w + "$ ")
     os.system(str(sun))
