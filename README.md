@@ -1,10 +1,12 @@
+[![Python application](https://github.com/darkdarcool/DarkScript-Compiler/actions/workflows/python-app.yml/badge.svg)](https://github.com/darkdarcool/DarkScript-Compiler/actions/workflows/python-app.yml)
+
 # Darkscript!
 
 DarkScript is a lightweight console based scripting language! Though it is slow, is is very easy to understand and I as slick with the colors as java.
 
 Now, here are a couple tutorials to help you eith your first DarkScript program!
 
----------
+------------------------
 Logging into the console
 ------------------------
 
