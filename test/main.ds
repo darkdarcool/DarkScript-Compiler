@@ -2,4 +2,4 @@ import console.commands.*
 window.sp("{blue}{bold}Hello user! What is your name?$n{end}")
 string name
 window.in(name)
-window.sp("{blue}{bold}Hello {{name}}!!")
+window.sp("{blue}{bold}Hello {{nameomg}}!!")

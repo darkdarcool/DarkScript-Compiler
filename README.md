@@ -6,9 +6,9 @@ DarkScript is a lightweight console based scripting language! Though it is slow,
 
 Now, here are a couple tutorials to help you eith your first DarkScript program!
 
-------------------------
-Logging into the console
-------------------------
+----------------------------
+**Logging into the console**
+----------------------------
 
 To print things into the console, DarkScript uses two main built-in functions to do so!
 
@@ -36,6 +36,7 @@ Unfortanantly ASNI escape codes don't work in this version of DarkScript. But if
 <details>
 <summary>List of colors</summary>
 <br>
+
 * Red
 
 * Blue
@@ -49,3 +50,7 @@ Unfortanantly ASNI escape codes don't work in this version of DarkScript. But if
 * Bold
   
 </details>
+
+--------------
+**User Input**
+--------------

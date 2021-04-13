@@ -28,75 +28,75 @@ today = date.today()
 print("What is file path?")
 file_path = input("")
 if '.ds' in file_path:
-  pass
+    pass
 else:
-  raise Exception(f"{file_path} is not a DarkScript code file")
+    raise Exception(f"{file_path} is not a DarkScript code file")
 try:
-  file = open(f"{file_path}","r")
+    file = open(f"{file_path}", "r")
 except:
-  raise Exception("No file in file path " + file_path + "!")
+    raise Exception("No file in file path " + file_path + "!")
 os.system("clear")
 print("Darkscript 1.0.2(early release)(" + str(today) + ")")
 Counter = 0
-  
-# Reading from file 
-Content = file.read() 
-CoList = Content.split("\n") 
+
+# Reading from file
+Content = file.read()
+CoList = Content.split("\n")
 load = 0
-for i in CoList: 
+for i in CoList:
     if i:
         load += 1
 
 while (True):
-  sun = input()
-  if "run-project" in sun:
-    while (" " in sun):
-      sun = sun.replace(" ", "")
-    if sun == "run-project":
-      break
-  elif "darkscript main.ds" in sun:
-    while (" " in sun):
-      sun = sun.replace(" ", "")
-    if sun == "darkscriptmain.ds":
-      break
-  elif "ds main.ds" in sun:
-    while (" " in sun):
-      sun = sun.replace(" ", "")
-    if sun == "dsmain.ds":
-      break
-  if "run" in sun:
-    while (" " in sun):
-      sun = sun.replace(" ", "")
-    if sun == "run":
-      break
-  if "ds install jb" in sun:
-      print("Installed JB module.")
-      jb = 1
-  elif "clear" in sun:
-    while (" " in sun):
-      sun = sun.replace(" ", "")
-    if sun == "clear":
-      os.system("clear")
-      print("Darkscript 1.0.2(early release)(" + str(today) + ")")
+    sun = input()
+    if "run-project" in sun:
+        while (" " in sun):
+            sun = sun.replace(" ", "")
+        if sun == "run-project":
+            break
+    elif "darkscript main.ds" in sun:
+        while (" " in sun):
+            sun = sun.replace(" ", "")
+        if sun == "darkscriptmain.ds":
+            break
+    elif "ds main.ds" in sun:
+        while (" " in sun):
+            sun = sun.replace(" ", "")
+        if sun == "dsmain.ds":
+            break
+    if "run" in sun:
+        while (" " in sun):
+            sun = sun.replace(" ", "")
+        if sun == "run":
+            break
+    if "ds install jb" in sun:
+        print("Installed JB module.")
+        jb = 1
+    elif "clear" in sun:
+        while (" " in sun):
+            sun = sun.replace(" ", "")
+        if sun == "clear":
+            os.system("clear")
+            print("Darkscript 1.0.2(early release)(" + str(today) + ")")
+        else:
+            os.system(str(sun))
     else:
-      os.system(str(sun))
-  else:
-    os.system(str(sun))
+        os.system(str(sun))
 mathsa = 0
 num1 = 0
 num = 0
 print("Compiling script")
 while (num < load):
-  print("Compiling... /")
-  time.sleep(0.08)
-  os.system("clear")
-  print("Compiling... -")
-  time.sleep(0.08)
-  os.system("clear")
-  print("Compiling... \ ")
-  time.sleep(0.08)
-  os.system("clear")
-  num += 1
+    print("Compiling... /")
+    time.sleep(0.08)
+    os.system("clear")
+    print("Compiling... -")
+    time.sleep(0.08)
+    os.system("clear")
+    print("Compiling... \ ")
+    time.sleep(0.08)
+    os.system("clear")
+    num += 1
 
 num2 = 0
 getChar1 = "none"
@@ -126,21 +126,29 @@ bold = '\033[1m'
 end = '\033[0m'
 pink = '\033[95m'
 allvars = {}
+
+
 def check():
     df = re.findall("(?<=[AZaz])?(?!\d*=)[0-9.+-]+", lines)
     df = str(df)
+
+
 def sp(text):
     words = text
     for char in words:
         time.sleep(0.04)
         sys.stdout.write(char)
         sys.stdout.flush()
+
+
 var1 = "Undefined variable"
 input1 = "Undefined input"
 input2 = "Undefined input"
 input3 = "Undefined input"
 line = 0
 read_line = 0
+
+
 def sppi():
     try:
         if console == 1:
@@ -159,7 +167,7 @@ def sppi():
             res = res.replace('{green}', green)
             res = res.replace('{magenta}', magenta)
             res = res.replace('{cyan}', cyan)
-            
+
             if "{{" in res:
                 if "}}" in res:
                     start = "{{"
@@ -194,8 +202,12 @@ def sppi():
             # read_line = 1
     except:
         pass
+
+
 read = 1
 maths = 0
+
+
 def logli():
     try:
         if '")' in lines:
@@ -249,6 +261,8 @@ def logli():
             pass
     except:
         pass
+
+
 def logi():
     if '")' in lines:
         spl_word = '  window.out("'
@@ -303,6 +317,8 @@ def logi():
         # read_line = 1
     else:
         pass
+
+
 def spp():
     if console == 1:
         spl_word = 'window.sp("'
@@ -350,56 +366,60 @@ def spp():
         split_string = res.split("\")", -1)
         res = split_string[0]
         sp(res)
+
+
         # read_line = 0
 def sppj():
     if console == 1:
-      if jb == 1:
-        spl_word = 'slowwrite("'
-        res = lines.partition(spl_word)[2]
-        res = res.replace('$n', '\n')
-        res = res.replace('\')', '')
-        res = res.replace('{red}', red)
-        res = res.replace('{blue}', blue)
-        res = res.replace('{bold}', bold)
-        res = res.replace('{green}', green)
-        res = res.replace('{magenta}', magenta)
-        res = res.replace('{getChar1}', getChar1)
-        res = res.replace('{getChar2}', getChar2)
-        res = res.replace('{getChar3}', getChar3)
-        res = res.replace('{cyan}', cyan)
-        res = res.replace('{yellow}', yellow)
-        res = res.replace('{white}', w)
-        res = res.replace('{black}', black)
-        res = res.replace('{pink}', pink)
-        res = res.replace('{end}', '\033[0m')
-        res = res.replace("{{input1}}", input1)
-        res = res.replace("{{input2}}", input2)
-        res = res.replace("{{input3}}", input3)
-        if "{{" in res:
-            if "}}" in res:
-                start = "{{"
-                end = "}}"
-                check = res[res.find(start) + len(start):res.rfind(end)]
-                if check in allvars:
-                    res = res.replace("{{", "")
-                    res = res.replace("}}", "")
-                    dffdfdfdf = allvars[check]
-                    res = res.replace(check, str(dffdfdfdf))
-                else:
-                    os.system("clear")
-                    print(red + bold + str(lines) + "\n" + green +
-                          "^~~~~~~~~~~~~" + yellow + bold +
-                          "\n[Varaible error on line " + str(line) + "]:" +
-                          red + bold + "\n" + sun +
-                          " is not a varaible. Please create " + sun +
-                          " a varaiable. To use it in inputs")
-        res = res.replace('"', "")
-        res = res.replace(")", "")
-        res = res.replace("{{var1}}", var1)
-        split_string = res.split("\")", -1)
-        res = split_string[0]
-        sp(res)
-        # read_line = 0
+        if jb == 1:
+            spl_word = 'slowwrite("'
+            res = lines.partition(spl_word)[2]
+            res = res.replace('$n', '\n')
+            res = res.replace('\')', '')
+            res = res.replace('{red}', red)
+            res = res.replace('{blue}', blue)
+            res = res.replace('{bold}', bold)
+            res = res.replace('{green}', green)
+            res = res.replace('{magenta}', magenta)
+            res = res.replace('{getChar1}', getChar1)
+            res = res.replace('{getChar2}', getChar2)
+            res = res.replace('{getChar3}', getChar3)
+            res = res.replace('{cyan}', cyan)
+            res = res.replace('{yellow}', yellow)
+            res = res.replace('{white}', w)
+            res = res.replace('{black}', black)
+            res = res.replace('{pink}', pink)
+            res = res.replace('{end}', '\033[0m')
+            res = res.replace("{{input1}}", input1)
+            res = res.replace("{{input2}}", input2)
+            res = res.replace("{{input3}}", input3)
+            if "{{" in res:
+                if "}}" in res:
+                    start = "{{"
+                    end = "}}"
+                    check = res[res.find(start) + len(start):res.rfind(end)]
+                    if check in allvars:
+                        res = res.replace("{{", "")
+                        res = res.replace("}}", "")
+                        dffdfdfdf = allvars[check]
+                        res = res.replace(check, str(dffdfdfdf))
+                    else:
+                        os.system("clear")
+                        print(red + bold + str(lines) + "\n" + green +
+                              "^~~~~~~~~~~~~" + yellow + bold +
+                              "\n[Varaible error on line " + str(line) + "]:" +
+                              red + bold + "\n" + sun +
+                              " is not a varaible. Please create " + sun +
+                              " a varaiable. To use it in inputs")
+            res = res.replace('"', "")
+            res = res.replace(")", "")
+            res = res.replace("{{var1}}", var1)
+            split_string = res.split("\")", -1)
+            res = split_string[0]
+            sp(res)
+
+
+            # read_line = 0
 def loglj():  #add suggestion about lang or whatever, KK- dark
     try:
         if (jb == 1):
@@ -458,6 +478,8 @@ def loglj():  #add suggestion about lang or whatever, KK- dark
             errors()
     except:
         pass
+
+
 def lognj():  #add suggestion about lang or whatever, KK- dark
     try:
         if (jb == 1):
@@ -516,6 +538,8 @@ def lognj():  #add suggestion about lang or whatever, KK- dark
             errors()
     except:
         pass
+
+
 def logl():
     try:
         if '")' in lines:
@@ -571,6 +595,8 @@ def logl():
             errors()
     except:
         pass
+
+
 def log():
     try:
         if '")' in lines:
@@ -627,6 +653,8 @@ def log():
             errors()
     except:
         pass
+
+
 red = "\033[0;31m"
 bold = '\033[1m'
 newvar = 0
@@ -634,15 +662,16 @@ f = open(f'{file_path}')
 readline2 = 0
 for lines in f.readlines():
     if "?*" in lines:
-      readline2 = 1
+        readline2 = 1
     if readline2 == 1:
-      continue
-    if "*?" in lines:
-      readline2 = 0
-      continue
-    if "//" in lines:
-      if jb == 1:
         continue
+    if "*?" in lines:
+        readline2 = 0
+        continue
+    if "//" in lines:
+        if jb == 1:
+            continue
+
     def errors():
         if "??" in lines:
             return
@@ -701,12 +730,12 @@ for lines in f.readlines():
     elif "??" in lines:
         pass
     lines = lines.rstrip()
-    
+
     if 'import jb.lang.*' in lines:
         jb = 1
         continue
     if "writeN(\"" in lines:
-      lognj()
+        lognj()
     if 'string ' in lines:
         spl_word = "string "
         newvar = lines.partition(spl_word)[2]
@@ -716,19 +745,19 @@ for lines in f.readlines():
         newvar = split_string[0]
         allvars[newvar] = None
     if "force.exit" in lines:
-      if jb == 1:
-        break
-      else:
-        pass
+        if jb == 1:
+            break
+        else:
+            pass
     if 'var ' in lines:
-      if jb == 1:
-        spl_word = "var "
-        newvar = lines.partition(spl_word)[2]
-        split_string = newvar.split("\")", -1)
-        newvar.replace(')', '')
-        newvar.replace('\"', '')
-        newvar = split_string[0]
-        allvars[newvar] = 0
+        if jb == 1:
+            spl_word = "var "
+            newvar = lines.partition(spl_word)[2]
+            split_string = newvar.split("\")", -1)
+            newvar.replace(')', '')
+            newvar.replace('\"', '')
+            newvar = split_string[0]
+            allvars[newvar] = 0
     if '??' in lines:
         pass
         read_line = 0
@@ -795,13 +824,13 @@ for lines in f.readlines():
         res = split_string[0]
         time.sleep(float(res))
     if 'usleep(' in lines:
-      if jb == 1:
-        spl_word = 'usleep('
-        res = lines.partition(spl_word)[2]
-        split_string = res.split(")", -1)
-        res.replace(')', '')
-        res = split_string[0]
-        time.sleep(float(res))
+        if jb == 1:
+            spl_word = 'usleep('
+            res = lines.partition(spl_word)[2]
+            split_string = res.split(")", -1)
+            res.replace(')', '')
+            res = split_string[0]
+            time.sleep(float(res))
     if "?/" in lines:
         read = 0
     if "/?" in lines:
@@ -860,7 +889,7 @@ for lines in f.readlines():
         spp()
     #passsssss#umm wat is this so i can use cntl-f to find it later ah,ok
     elif "slowwrite(\"" in lines:
-      sppj()
+        sppj()
     elif 'window.out.ln("' in lines:
         if 'window.out.ln("' in lines:
             logl()
@@ -920,15 +949,15 @@ for lines in f.readlines():
     elif "window.clear(clear:all)" in lines:
         os.system('clear')
     elif "clear(console)" in lines:
-      if jb == 1:
-        os.system('clear; echo 0')
-      else:
-        pass
+        if jb == 1:
+            os.system('clear; echo 0')
+        else:
+            pass
     elif "clear(console.all)" in lines:
-      if jb == 1:
-        os.system('clear')
-      else:
-        pass
+        if jb == 1:
+            os.system('clear')
+        else:
+            pass
     elif "window.rand(rand1)::(" in lines:
         spl_word = 'window.rand(rand1)::('
         res = lines.partition(spl_word)[2]
@@ -970,5 +999,5 @@ for lines in f.readlines():
 #print(w)
 print(red + bold + "\nCode file exacuted with no errors")
 while True:
-  sun = input(blue + bold + "~/DarkScript-Compiler" + end + w + "$ ")
-  os.system(str(sun))
+    sun = input(blue + bold + "~/DarkScript-Compiler" + end + w + "$ ")
+    os.system(str(sun))
