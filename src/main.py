@@ -620,7 +620,7 @@ def log():
 red = "\033[0;31m"
 bold = '\033[1m'
 newvar = 0
-f = open('main.ds')
+f = open(f'{file_path}')
 readline2 = 0
 for lines in f.readlines():
     if "?*" in lines:

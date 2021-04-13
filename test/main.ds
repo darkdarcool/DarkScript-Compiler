@@ -1,0 +1,2 @@
+import jb.lang.*
+writeN("Hello! It's me!")
